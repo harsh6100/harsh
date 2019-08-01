@@ -1,6 +1,6 @@
 
     
-pipeline {
+node {
     
    def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
     stages {
