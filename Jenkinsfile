@@ -1,17 +1,18 @@
 
     
 pipeline {
-    agent { docker 'maven' }
+    
+   def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
     stages {
         stage('compile stage') {
             steps {
-                bat 'mvn compile'
+                sh "${mvn} compile"
             }
            
         }
         stage('test') {
             steps {
-                bat 'mvn test'
+                 sh "${mvn} test"
             }
            
         }
