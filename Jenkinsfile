@@ -1,23 +1,17 @@
+ode {
 
-    
-node {
-    
    def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
+   stage('SCM Checkout'){
     
-        stage('compile stage') {
-         
-                sh "${mvn} compile"
-            
-           
-        }
-        stage('test') {
-        
-                 sh "${mvn} test"
-            
-           
-        }
-    }
-
-
-
-
+	git branch: 'master',	
+	url: 'https://github.com/javahometech/myweb'
+   
+   }
+     
+	
+   stage('Compile and build'){
+	  
+	   
+	   sh "${mvn} package"
+   }
+}
