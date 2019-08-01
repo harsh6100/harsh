@@ -1,4 +1,4 @@
-ode {
+node {
 
    def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
