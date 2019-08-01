@@ -1,24 +1,22 @@
+
+    
 pipeline {
-    agent any
-
+    agent { docker 'maven' }
     stages {
-        stage ('Compile Stage') {
-
+        stage('compile stage') {
             steps {
-                withMaven(maven : 'maven') {
-                    sh 'mvn clean compile'
-                }
+                bat 'mvn compile'
             }
+           
         }
-
-        stage ('Testing Stage') {
-
+        stage('test') {
             steps {
-                withMaven(maven : 'maven') {
-                    sh 'mvn test'
-                }
+                bat 'mvn test'
             }
+           
         }
-
     }
 }
+
+
+
