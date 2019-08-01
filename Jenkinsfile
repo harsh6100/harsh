@@ -12,6 +12,6 @@ node {
    stage('Compile and build'){
 	  
 	   
-	   sh "${mvn} package"
+	   bat "${mvn} package"
    }
 }
