@@ -4,7 +4,7 @@ ode {
    stage('SCM Checkout'){
     
 	git branch: 'master',	
-	url: 'https://github.com/javahometech/myweb'
+	url: 'https://github.com/harsh6100/harsh'
    
    }
      
