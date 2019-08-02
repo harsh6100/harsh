@@ -29,4 +29,9 @@ node {
 	  
 		deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'deploy', war: 'target/*.war'
    }
+	  stage('Email'){
+	  
+	  
+	  deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'deploy', war: 'target/*.war'
+   }
 }
