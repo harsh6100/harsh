@@ -29,9 +29,4 @@ node {
 	  
 		deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'deploy', war: 'target/*.war'
    }
-	  stage('Email'){
-	  
-	  
-	emailext body: 'Your Build is Successful', recipientProviders: [developers()], subject: 'Build successful', to: 'harsh6100@gmail.com'
-   }
 }
