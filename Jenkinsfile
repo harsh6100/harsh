@@ -19,4 +19,10 @@ node {
 	  
 	  bat "${mvn} test"
    }
+	
+   stage('Deploy'){
+	  
+	  
+	    bat '''copy C:\Program Files (x86)\Jenkins\workspace\pipe-autodeploy1\target\*.war C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat8\webapps'''
+   }
 }
