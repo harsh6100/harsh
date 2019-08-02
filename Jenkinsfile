@@ -14,4 +14,9 @@ node {
 	   
 	   bat "${mvn} package"
    }
+  stage('Test'){
+	  
+	  
+	  bat "${mvn} test"
+   }
 }
