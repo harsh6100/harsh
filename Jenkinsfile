@@ -27,6 +27,6 @@ node {
 	stage('Deploy'){
 	  
 	  
-		deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'deploy', war: 'target/*.war'
+		deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'project', war: 'target/*.war'
    }
 }
