@@ -20,9 +20,9 @@ node {
 	  bat "${mvn} test"
    }
 	
-   stage('Deploy'){
+	stage('Deploy'){
 	  
 	  
-	    bat "copy C:\\Program Files (x86)\\Jenkins\\workspace\\pipe-autodeploy1\\target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0_Tomcat8\\webapps"
+		deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8083')], contextPath: 'deploy', war: 'target/*.war'
    }
 }
